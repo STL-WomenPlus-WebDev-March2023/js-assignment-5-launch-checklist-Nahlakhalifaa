@@ -1,4 +1,4 @@
-// Write your helper functions here!
+
 // Write your helper functions here!
 require("isomorphic-fetch");
 
@@ -71,7 +71,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
       alert("Invalid input!");
     } else {
       if (fuelLevel.value >= 10000 && cargoLevel.value <= 10000) {
-        //fuelStatus.innerHTML = `fuel level too low for launch`;
+        //fuelStatus.innerHTML = 'fuel level too low for launc';
         faultyItems.style.visibility = "visible";
         launchStatus.innerHTML = "Shuttle ready for launch";
         launchStatus.style.color = "green";
@@ -86,20 +86,30 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         copilotStatus.innerHTML = `${copilot.value} is ready for launch`;
         cargoStatus.innerHTML = `there is too much mass for the shuttle to take off.`;
       }
+      "<br>"
       if (fuelLevel.value < 10000 && cargoLevel.value <= 10000) {
         faultyItems.style.visibility = "visible";
         launchStatus.innerHTML = "Shuttle not ready for launch";
         launchStatus.style.color = "red";
-        pilotStatus.innerHTML = `${pilot.value} is ready for launch`;
-        copilotStatus.innerHTML = `${copilot.value} is ready for launch`;
-        fuelStatus.innerHTML = `fuel level too low for launch`;
+        pilotStatus.innerHTML = '${pilot.value} is ready for launch'
+        
+        ;
+        copilotStatus.innerHTML = '${copilot.value} is ready for launch'
+        
+        ;
+        fuelStatus.innerHTML = 'fuel level too low for launch';
       }
+      "<br>"
       if (fuelLevel.value < 10000 && cargoLevel.value > 10000) {
         faultyItems.style.visibility = "visible";
         launchStatus.innerHTML = "Shuttle not ready for launch";
         launchStatus.style.color = "red";
-        pilotStatus.innerHTML = `${pilot.value} is ready for launch`;
-        copilotStatus.innerHTML = `${copilot.value} is ready for launch`;
+        pilotStatus.innerHTML = '${pilot.value} is ready for launch'
+        
+        ;
+        copilotStatus.innerHTML = '${copilot.value} is ready for launch'
+        
+        ;
         fuelStatus.innerHTML = `fuel level too low for launch`;
         cargoStatus.innerHTML = `there is too much mass for the shuttle to take off.`;
       }
